@@ -1,0 +1,54 @@
+#main-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blueviolet;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+}
+
+    #left-side {
+        background-color:darkgoldenrod;
+        width: 500px;
+        padding: 20px;
+    }
+
+        #chat-window {
+            display: flex;
+            flex-direction: column;
+            background-color:chartreuse;
+            padding: 20px;
+            justify-content: space-between;
+            height: calc(100% - 40px);
+        }
+
+            #chat {
+                background-color:white;
+                height: 400px;
+                padding: 20px;
+                overflow-y: auto;
+            }
+
+            #prompt-bar {
+                display: flex;
+                flex-direction: row;
+                background-color:aqua;
+                padding: 10px;
+                justify-content: space-between;
+            }
+
+                #prompt-bar input{
+                    width: 70%;
+                }
+
+                #prompt-bar button {
+                    width: 20%;
+                }
+
+    #right-side {
+        background-color:brown;
+        width: 300px;
+    }
