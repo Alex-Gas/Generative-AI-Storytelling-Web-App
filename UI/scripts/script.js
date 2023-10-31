@@ -1,13 +1,17 @@
 var input;
 
+// here is where the prompt is acquired
 function submitPrompt(){
-    console.log("hello world")
-
     input = document.getElementById("prompt").value
    
     if (input != null){
         addChatElement()
     }
+}
+
+// here a link will be used to upload a text file of the book
+function submitLink(){
+    link = document.getElementById("link").value
 }
 
 // example functionality
