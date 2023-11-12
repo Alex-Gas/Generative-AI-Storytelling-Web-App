@@ -1,5 +1,7 @@
 const apiUrl = 'http://127.0.0.1:5000/'; // Replace with the actual API endpoint
 
+
+// performs http post request to server which uses openai library 
 const askGpt = (question) => {
     console.log("test")
     fetch(apiUrl+"askgpt", {
@@ -22,17 +24,13 @@ const askGpt = (question) => {
         console.log('Response from server:', responseData);
         console.log("response:"+responseData['response'])
         const chat = document.getElementById('chat');
-        
-        // document.getElementById('answer').innerHTML = responseData['response'];
-        return responseData['response'];
-        // Handle the response data here
+
+        // update chat log
+        addChatElement(responseData["response"]);
     })
     .catch(error => {
         console.error('There was a problem with the POST request:', error);
     });
-    
-    console.log("response:"+response['response'])
-        document.getElementById('answer').innerHTML = response['response'];
 
     function displayAnswer(answer) {
         document.getElementById('answer').innerHTML = answer;
@@ -45,10 +43,7 @@ var input;
 // here is where the prompt is acquired
 function submitPrompt(){
     input = document.getElementById("prompt").value
-    const response = askGpt(input);
-    if (input != null){
-        addChatElement(response)
-    }
+    const answ = askGpt(input);
 }
 
 // here a link will be used to upload a text file of the book
@@ -57,12 +52,13 @@ function submitLink(){
 }
 
 // example functionality
-function addChatElement(response){
+function addChatElement(outputString){
+    
     // creates p element and adds it to chat div with prompt value
     var paragraph = document.createElement("p");
-    paragraph.textContent = response;
+    console.log("outputString: "+outputString)
+    paragraph.textContent = outputString;
     var chatDiv = document.getElementById("chat");
-
     chatDiv.appendChild(paragraph);
     
 }
