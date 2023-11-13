@@ -1,16 +1,30 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-from openai import OpenAI
+# from openai import OpenAI
+from langchain.llms.openai import OpenAI
+from langchain.chains import ConversationChain 
+from langchain.schema.language_model import BaseLanguageModel
+
 
 app = Flask(__name__)
 
 CORS(app)
 
-client = OpenAI(
-    # defaults to os.environ.get("OPENAI_API_KEY")
-    api_key="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"
+# client = OpenAI(
+#     # defaults to os.environ.get("OPENAI_API_KEY")
+#     api_key="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",
+# )
+
+
+
+llm = OpenAI(model_name="gpt-3.5-turbo", temperature=0.0, api_key="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",)
+
+conversation = ConversationChain(
+    llm=llm
 )
+
+print("CONVO: "+conversation.prompt.template)
 
 # chat_completion = client.chat.completions.create(
 #     messages=[
