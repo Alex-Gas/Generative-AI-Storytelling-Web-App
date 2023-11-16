@@ -5,6 +5,10 @@ from flask_cors import CORS
 from langchain.llms.openai import OpenAI
 from langchain.chains import ConversationChain 
 from langchain.schema.language_model import BaseLanguageModel
+from langchain.chains.conversation.memory import (ConversationBufferMemory, 
+                                                  ConversationSummaryMemory, 
+                                                  ConversationBufferWindowMemory,
+                                                  ConversationKGMemory)
 
 
 app = Flask(__name__)
@@ -25,6 +29,14 @@ conversation = ConversationChain(
 )
 
 print("CONVO: "+conversation.prompt.template)
+
+conversation_buf = ConversationChain(
+    llm=llm,
+    memory= ConversationBufferMemory()
+)
+
+print(conversation_buf.memory)
+conversation_buf("good morning all!")
 
 # chat_completion = client.chat.completions.create(
 #     messages=[
