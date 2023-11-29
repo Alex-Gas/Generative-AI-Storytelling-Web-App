@@ -63,3 +63,45 @@ function addChatElement(outputString){
     
 }
 
+function submitSettings(){
+
+    lockSettings();
+
+    uploadSettings();   // this method MUST be between lockSettings() and showChat()
+
+    showChat();
+}
+
+// show chat and hide settings
+function showChat(){
+    document.getElementById("settings-window").style.display = "none"
+    document.getElementById("chat-window").style.display = "block"
+}
+
+// show settings and hide chat
+function showSettings(){
+    document.getElementById("chat-window").style.display = "none"
+    document.getElementById("settings-window").style.display = "block"
+}
+
+// this function is a safety mechanism that disables all input boxes during the wait time between clicking the button and getting an answer from chatgpt
+function lockSettings(){
+    // all setting boxes will be turned off so no input can be changed
+    let list = document.getElementsByClassName("setting");
+    for (let i = 0; i < list.length; i++){
+        list[i].disabled = true
+    }
+    
+}
+
+// here the settings get sent to chatgpt
+function uploadSettings(){
+
+    let world = document.getElementById("world-input").value
+    let protagonist = document.getElementById("protagonist-input").value
+    let antagonist = document.getElementById("antagonist-input").value
+
+    
+    // compile the settings and send it to Chat-GPT 
+}
+

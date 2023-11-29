@@ -7,8 +7,9 @@
 	</head>
 	<body>
 		<div id = "main-window"> <!-- flex row-->
-			<div id = "left-side">
-				<div id = "chat-window"> <!-- flex column-->
+
+			<div id = "chat-window" class="toggleable-window">
+				<div id = "chat-box"> <!-- flex column-->
 					<div id = "chat">
 						<p>Hi</p>
 					</div>
@@ -18,22 +19,28 @@
 					</div>
 				</div>
 			</div>
-			<div id = "right-side">
-				<div id = "settings-window">
+
+			<div id = "settings-window" class="toggleable-window">
+				<div id = "settings-box">
 					<div id = "link-bar">
-						<input id = "link" type="text" name="link">
+						<input id = "link" type="text" name="link" placeholder = "book reference here">
 						<button onclick="submitLink()">Upload</button> 
 					</div>
 					<div id = "feedback-box">
 						<div id = "feedback"> <!-- this is where information on what title of the text has been uploaded etc -->
-							<p>Text upload status and title here</p> 
+							<p>This will be gone probably</p> 
 						</div>
 					</div>
-					<div id = "settings-box">
-						<p> Settings here </p> <!-- placeholder -->
+					<div id = "settings">
+						<input class = "setting" id = "world-input" type="text" name="world" placeholder = "World summary">
+						<input class = "setting" id = "protagonist-input" type="text" name="protagonist" placeholder = "Protagonist">
+						<input class = "setting" id = "antagonist-input" type="text" name="antagonist" placeholder = "Antagonist">
 					</div>
+					<button onclick="submitSettings()">Submit</button>
 				</div>
 			</div>
+
+
 		</div>
 	</body>
 </html>
