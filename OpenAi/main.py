@@ -1,24 +1,23 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-import openai
-
+from openai import OpenAI
 app = Flask(__name__)
 
 CORS(app, resources={r"/*": {"origins": "http://127.0.0.1:5501/"}})
 
 
-openai.api_key = "ENTER YOUR API KEY"
+client = OpenAI(api_key="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")
 
 
 # get question response from open ai
 def askGpt(question):
 
-    response = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
+    response = client.chat.completions.create(
+    model="gpt-4",
     messages=[
             {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": question["question"]},
+            {"role": "user", "content": question},
     ]
     )
     answer = {
@@ -27,13 +26,15 @@ def askGpt(question):
     }
     return answer
 
+print(askGpt("create an svg image of an apple"))
+
 
 # connection to front end
 @app.route('/askgpt', methods=['POST'])
 def receive_json():
     if request.is_json:
         data = request.get_json()
-        answer = askGpt(data)
+        answer = askGpt(data["question"])
         print(answer)
         return jsonify(answer)
     else:

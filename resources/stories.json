@@ -1,4 +1,57 @@
+
 [
+    {
+        "title": "Percy Jackson and the Lightning Thief",
+        "genre": "fantasy",
+        "incitingEvent": "Percy Jackson discovers that he is a demigod, setting him on a quest to clear his name and prevent a war among the gods.",
+        "firstPlotPoint": "Percy chooses Dauntless as her faction during the initiation process, leaving behind her family in the Abnegation faction.",
+        "firstPinchPoint": "Tris faces intense competition and initiations within Dauntless, revealing the brutal nature of the faction.",
+        "midpoint": "Tris uncovers a conspiracy to overthrow the government and control the society, intensifying the conflict.",
+        "secondPinchPoint": "The simulation tests become increasingly dangerous, and Tris's secret as a Divergent becomes more perilous.",
+        "thirdPlotPoint": "Tris and her friends uncover the true purpose of the faction system and the plan to eliminate the Divergent population.",
+        "climax": "Tris faces the final simulation, designed to eliminate the Divergent, demonstrating her strength and resilience.",
+        "climacticMoment": "Tris refuses to conform to the faction system and challenges the leaders, becoming a symbol of rebellion.",
+        "resolution": "Tris takes a stand against the faction system, setting the stage for a revolution."
+      },
+      {
+        "title": "The War of the Worlds",
+        "genre": "sci-fi",
+        "incitingEvent": "Strange cylindrical objects land on Earth, and Martians emerge, launching an invasion.",
+        "firstPlotPoint": "The military attempts to defend against the Martian tripods, but their advanced weaponry proves overwhelming.",
+        "firstPinchPoint": "The Martian tripods continue their destructive rampage, causing widespread panic and devastation.",
+        "midpoint": "The protagonist witnesses the Martian's deadly efficiency and the collapse of human civilization.",
+        "secondPinchPoint": "The Martians deploy their deadly 'black smoke,' a chemical weapon that devastates the human population.",
+        "thirdPlotPoint": "The protagonist encounters the Martian tripods firsthand, witnessing their relentless pursuit of humanity.",
+        "climax": "The protagonist discovers the vulnerability of the Martians to Earth's microbes, leading to their downfall.",
+        "climacticMoment": "The Martian invasion collapses as the invaders succumb to Earth's microbes.",
+        "resolution": "The protagonist reflects on the devastating impact of the Martian invasion, and humanity begins the process of rebuilding."
+      },
+      {
+        "title": "Divergent",
+        "genre": "dystopian",
+        "incitingEvent": "Beatrice 'Tris' Prior discovers that she is Divergent, setting her on a path of self-discovery and defiance against the rigid social structure.",
+        "firstPlotPoint": "Tris chooses Dauntless as her faction during the initiation process, leaving behind her family in the Abnegation faction.",
+        "firstPinchPoint": "Tris faces intense competition and initiations within Dauntless, revealing the brutal nature of the faction.",
+        "midpoint": "Tris uncovers a conspiracy to overthrow the government and control the society, intensifying the conflict.",
+        "secondPinchPoint": "The simulation tests become increasingly dangerous, and Tris's secret as a Divergent becomes more perilous.",
+        "thirdPlotPoint": "Tris and her friends uncover the true purpose of the faction system and the plan to eliminate the Divergent population.",
+        "climax": "Tris faces the final simulation, designed to eliminate the Divergent, demonstrating her strength and resilience.",
+        "climacticMoment": "Tris refuses to conform to the faction system and challenges the leaders, becoming a symbol of rebellion.",
+        "resolution": "Tris takes a stand against the faction system, setting the stage for a revolution."
+      },
+      {
+        "title": "Island",
+        "genre": "utopian",
+        "incitingEvent": "Will Farnaby, a cynical journalist, finds himself shipwrecked on the fictional island of Pala, marking the beginning of his exploration of the island's philosophies.",
+        "firstPlotPoint": "Farnaby encounters the peaceful and harmonious way of life on Pala, questioning his own values and beliefs.",
+        "firstPinchPoint": "Farnaby learns about the imminent threat of outside forces that seek to exploit Pala's resources.",
+        "midpoint": "Farnaby delves deeper into Pala's culture, spirituality, and therapeutic practices, experiencing personal growth.",
+        "secondPinchPoint": "The external threat to Pala intensifies as forces seeking to exploit the island become more aggressive.",
+        "thirdPlotPoint": "Farnaby grapples with the internal and external conflicts on Pala, facing a pivotal moment that will determine the island's fate.",
+        "climax": "Farnaby confronts the internal and external conflicts on Pala as the island faces a critical juncture.",
+        "climacticMoment": "Farnaby is torn between his allegiances as the utopian society faces challenges.",
+        "resolution": "Farnaby reflects on the internal and external conflicts, and the island's residents confront the challenges to their way of life."
+      },
     {
         "title": "The American",
         "Inciting Event": "Newman meets Madame de Cintrè. This is a love story, and as such the big moment that launches the plot is the moment that brings the romantic leads together. But this moment doesn’t force them together. They can and do walk away from each other at this point. This is just the set-up.",
@@ -11,6 +64,19 @@
         "Climatic Moment": "Newman decides to give up the countess. Here, it is the antagonists who triumph, because Newman can’t stomach the means he would have to use to bring the antagonists to heel.",
         "Resolution": "Newman burns the letter that indicates the mother’s guilt. He ties off the last of the loose ends so the story can end."
         
-    }
+    },
+    {
+      
+        "title": "Spiderman Homecoming",
+        "Inciting Event": "While patrolling the neighborhood for his 'Stark internship,' Peter spots bank robbers and intercedes. He is stunned—and the neighborhood all but destroyed—by the alien tech the robbers are using. This isn’t the greatest Inciting Event you’re ever going to see, mostly because it isn’t a distinct Call to Adventure and definitely isn’t one Peter rejects, even for a moment. It’s a nice 'brush' with the main conflict, but also feels a little too distanced from that main conflict (in my opinion, anyway). Still, it does its job of setting up the main plot.",
+        "First Plot Point": "While at his high-school crush’s party, Peter spots the alien weapons being used, goes to investigate, and engages with the men selling the tech to street criminals (this is the Key Event). Then, for the first time, Peter comes face to face with the main antagonist, the Vulture, who dumps him in a lake, nearly killing him (but for the intervention of Tony Stark). From here on, Peter is fully engaged with the conflict. He is on the Vulture’s radar, and vice versa. More than that, he comes home with a 'glowy thing,' which he tries to research as a clue.",
+        "First Pinch Point": "While in Washington, DC, ostensibly on a school trip, Peter tracks down the Vulture in the middle of a heist, interferes, gets himself knocked out and locked up. He learns the 'glowy thing'—which is currently in his friend Ned’s backpack—is a Chitauri bomb, which will explode if exposed to radiation. This is a solid pinch point, in that it emphasizes the antagonistic force and the stakes, while also providing new info that sets up the Midpoint.",
+        "Midpoint": "The Chitauri bomb in Ned’s backpack blows up while the class is touring the top of the Washington Monument. Peter heroically saves everyone, including Liz, his secret crush. This is decidedly the weakest structural point in the entire film. Although it’s a great centerpiece scene, it’s related to the main conflict only in an ancillary fashion, and doesn’t provide a solid Moment of Truth for either the external or internal conflicts.",
+        "Second Pinch Point": " Madame de Cintrè’s family forces her to break the engagement and she goes away. The antagonists flex their impressive powers here–so impressively that this actually feels more like the Third Plot Point, in the sense that this is where the protagonist loses everything he cares about. But the timing (although it’s a little late to be the Pinch Point) and the lack of any other obvious contender for the Pinch Point make this the obvious answer.",
+        "Third Plot Point": "After the 'false victory' of having Liz agree to be his date to Homecoming, Peter realizes Liz’s father is the Vulture. He abandons Liz at the party and pursues the Vulture, even without his high-tech suit.",
+        "Climax": "Peter engages in a final confrontation with the Vulture, who is hijacking Tony’s invisible cargo jet.",
+        "Climactic Moment": "The Vulture’s wings blow up, grounding and nearly killing him. Peter saves him and leaves him for Happy Hogan and the police.",
+        "Resolution": "Tony offers Peter a place among the Avengers, but Peter makes the 'mature decision' to remain 'on the ground' for a little longer. Tony returns his suit."
+      }
 
 ]

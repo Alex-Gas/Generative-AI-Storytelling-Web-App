@@ -12,7 +12,7 @@ os.environ["OPENAI_API_KEY"] = Constants.APIKEY
 
 query = sys.argv[1]
 
-loader = TextLoader("./rescources/spiderman.json")
+loader = TextLoader("spiderman.json")
 #loader = DirectoryLoader(".", glob="*.txt")
 index = VectorstoreIndexCreator().from_loaders([loader])
 
