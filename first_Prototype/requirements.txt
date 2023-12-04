@@ -4,3 +4,4 @@ jsonify
 openai
 langchain
 tiktoken
+redis
