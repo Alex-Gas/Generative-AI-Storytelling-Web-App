@@ -1,28 +1,36 @@
-from typing import Optional
-
+from langchain.memory import ConversationBufferMemory
 from langchain.chat_models import ChatOpenAI
-from langchain.memory.chat_message_histories import RedisChatMessageHistory
-from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain.schema.chat_history import BaseChatMessageHistory
-from langchain.schema.runnable.history import RunnableWithMessageHistory
 
-REDIS_URL = "redis://localhost:6379/0"
 
-prompt = ChatPromptTemplate.from_messages(
-    [
-        ("system", "You are a story generating rpg that asks follow up questions to continue the story"),
-        MessagesPlaceholder(variable_name="history"),
-        ("human", "{question}"),
-    ]
+from langchain.chains import LLMChain
+from langchain.prompts import (
+    ChatPromptTemplate,
+    HumanMessagePromptTemplate,
+    MessagesPlaceholder,
+    SystemMessagePromptTemplate,
 )
 
-chain = prompt | ChatOpenAI(api_key="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")
+# LLM
+llm = ChatOpenAI(open_api_key="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")
 
-chain_with_history = RunnableWithMessageHistory(
-    chain,
-    lambda session_id: RedisChatMessageHistory(session_id, url=REDIS_URL),
-    input_messages_key="question",
-    history_messages_key="history",
-)
+# # Prompt
+# prompt = ChatPromptTemplate(
+#     messages=[
+#         SystemMessagePromptTemplate.from_template(
+#             "You are a nice chatbot having a conversation with a human."
+#         ),
+#         # The `variable_name` here is what must align with memory
+#         MessagesPlaceholder(variable_name="chat_history"),
+#         HumanMessagePromptTemplate.from_template("{question}"),
+#     ]
+# )
 
-print(chain_with_history)
+# # Notice that we `return_messages=True` to fit into the MessagesPlaceholder
+# # Notice that `"chat_history"` aligns with the MessagesPlaceholder name
+# memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
+# conversation = LLMChain(llm=llm, prompt=prompt, verbose=True, memory=memory)
+
+# # Notice that we just pass in the `question` variables - `chat_history` gets populated by memory
+# conversation({"question": "hi"})
+
+# print(memory)
