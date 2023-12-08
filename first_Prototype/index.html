@@ -20,16 +20,19 @@
 
 			<div id = "settings-window" class="toggleable-window">
 				<div id = "settings-box">
-					<div id = "link-bar">
-						<input id = "link" type="text" name="link" placeholder = "book reference here">
-						<button onclick="submitLink()">Upload</button> 
-					</div>
 					<div id = "feedback-box">
 						<div id = "feedback"> <!-- this is where information on what title of the text has been uploaded etc -->
 							<p>This will be gone probably</p> 
 						</div>
 					</div>
 					<div id = "settings">
+						<select name="genres" id="genre-select">
+							<option value="genre1">Genre 1</option>
+							<option value="genre2">Genre 2</option>
+							<option value="genre3">Genre 3</option>
+							<option value="genre4">Genre 4</option>
+						</select>
+						<!-- <input class = "setting" id = "genre" type="text" name="link" placeholder = "Pick genre"> -->
 						<input class = "setting" id = "world-input" type="text" name="world" placeholder = "World summary">
 						<input class = "setting" id = "protagonist-input" type="text" name="protagonist" placeholder = "Protagonist">
 						<input class = "setting" id = "antagonist-input" type="text" name="antagonist" placeholder = "Antagonist">
