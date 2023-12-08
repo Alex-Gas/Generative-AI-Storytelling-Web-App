@@ -52,11 +52,5 @@ print(question_generator.invoke("warm"))
 
 print(chain2.invoke({"person": "obama", "language": "spanish"}))
 
-class promptChain:
-    def __init__(self) -> None:
-        pass
-    def addPrompt()
-
-#recurring prompt
-newPrompt = ChatPromptTemplate("Previous Response({}) ")
+    
 

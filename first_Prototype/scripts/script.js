@@ -82,27 +82,41 @@ function submitSettings(){
 // here the settings get sent to chatgpt
 function uploadSettings(){
 
-    let world = document.getElementById("world-input").value
-    let protagonist = document.getElementById("protagonist-input").value
-    let antagonist = document.getElementById("antagonist-input").value
+    let genre = document.getElementById("genre-select").value;
+    let world = document.getElementById("world-input").value;
+    let protagonist = document.getElementById("protagonist-input").value;
+    let antagonist = document.getElementById("antagonist-input").value;
 
-    
+    console.log(genre)
+    console.log(world)
+    console.log(protagonist)
+    console.log(antagonist)
     // compile the settings and send it to Chat-GPT 
     // place here all functionality related to the first prompt which applies settings of the ChatGPT
 }
 
 // calling this function displays what the user prompts in the chat 
 function displayUserPrompt(text){
-    let box = document.createElement("div");
-    box.classList.add("chat-prompt-display");
-    spawnChatBox(text, box)
+    if (text != null){
+        let box = document.createElement("div");
+        box.classList.add("chat-prompt-display");
+        spawnChatBox(text, box);
+    }
+    else {
+        console.log("User input is null")
+    }
 }
 
 // calling this function display what the AI answeres in the chat
 function displayAIAnswer(text){
-    let box = document.createElement("div");
-    box.classList.add("chat-answer-display");
-    spawnChatBox(text, box)
+    if (text != null){
+        let box = document.createElement("div");
+        box.classList.add("chat-answer-display");
+        spawnChatBox(text, box);
+    }
+    else {
+        console.log("AI answer is null")
+    }
 }
 
 
@@ -113,7 +127,7 @@ function spawnChatBox(text, box){
     let paragraph = document.createElement("p");
     paragraph.textContent = text;
 
-    box.appendChild(paragraph)
+    box.appendChild(paragraph);
     let chatDiv = document.getElementById("chat");
 
     chatDiv.appendChild(box);
@@ -125,20 +139,20 @@ function lockSettings(){
     // all setting boxes will be turned off so no input can be changed
     let list = document.getElementsByClassName("setting");
     for (let i = 0; i < list.length; i++){
-        list[i].disabled = true
+        list[i].disabled = true;
     }
 }
 
 // show chat and hide settings
 // its for UI only, ignore it
 function showChat(){
-    document.getElementById("settings-window").style.display = "none"
-    document.getElementById("chat-window").style.display = "block"
+    document.getElementById("settings-window").style.display = "none";
+    document.getElementById("chat-window").style.display = "block";
 }
 
 // show settings and hide chat
 // its for UI only, ignore it
 function showSettings(){
-    document.getElementById("chat-window").style.display = "none"
-    document.getElementById("settings-window").style.display = "block"
+    document.getElementById("chat-window").style.display = "none";
+    document.getElementById("settings-window").style.display = "block";
 }
