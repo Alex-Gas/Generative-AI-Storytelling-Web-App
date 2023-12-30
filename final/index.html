@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title> AI Chat </title>
+		<link rel="stylesheet" type="text/css" href="./style/template.css">
+		<script src="script.js"></script>
+
+	</head>
+	<body>
+		<div id = "main-window"> <!-- flex row-->
+
+			<div id = "chat-window" class="toggleable-window">
+				<div id = "chat-box"> <!-- flex column-->
+					<div id = "chat"></div>
+					<div id = "prompt-bar"> <!-- flex row -->
+						<input id = "prompt" type="text" name="prompt">
+						<button id = "btnSubmit" onclick="submitPrompt()">Submit</button> 
+					</div>
+				</div>
+			</div>
+
+			<div id = "settings-window" class="toggleable-window">
+				<div id = "settings-box">
+					<div id = "feedback-box">
+						<div id = "feedback"> <!-- this is where information on what title of the text has been uploaded etc -->
+							<p>This will be gone probably</p> 
+						</div>
+					</div>
+					<div id = "settings">
+						<select name="genres" id="genre-select">
+							<option value="" disabled selected>Pick Genre</option>
+							<option value="genre1">Fantasy</option>
+							<option value="genre2">Sci-fi</option>
+							<option value="genre3">Utopian</option>
+							<option value="genre4">Distopian</option>
+						</select>
+						<!-- <input class = "setting" id = "genre" type="text" name="link" placeholder = "Pick genre"> -->
+						<input class = "setting" id = "world-input" type="text" name="world" placeholder = "World summary">
+						<input class = "setting" id = "protagonist-input" type="text" name="protagonist" placeholder = "Protagonist">
+						<input class = "setting" id = "antagonist-input" type="text" name="antagonist" placeholder = "Antagonist">
+					</div>
+					<button onclick="submitSettings()">Submit</button>
+				</div>
+			</div>
+
+
+		</div>
+	</body>
+</html>
+

@@ -1,3 +1,6 @@
+import os
+from dotenv import load_dotenv  
+
 from langchain.memory import ConversationBufferMemory
 from langchain.chat_models import ChatOpenAI
 
@@ -10,8 +13,12 @@ from langchain.prompts import (
     SystemMessagePromptTemplate,
 )
 
+# get api key from environment variable
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
+
 # LLM
-llm = ChatOpenAI(api_key="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")
+llm = ChatOpenAI(api_key=API_KEY, model="gpt-4")
 
 # Prompt
 prompt = ChatPromptTemplate(
@@ -44,7 +51,7 @@ print("Ask a question:")
 for i in range (5):
     question = input()
     answer = conversation({"question": question})
-    print(answer)
+    print(answer["text"])
 
 print(memory)
 

@@ -9,7 +9,7 @@ prompt2 = ChatPromptTemplate.from_template(
     "what country is the city {city} in? respond in {language}"
 )
 
-model = ChatOpenAI(api_key="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")
+model = ChatOpenAI(api_key="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")
 
 chain1 = prompt1 | model | StrOutputParser()
 
@@ -50,7 +50,7 @@ question_generator = (
 
 print(question_generator.invoke("warm"))
 
-print(chain2.invoke({"person": "obama", "language": "spanish"}))
+print(chain2.invoke({"person": "obama", "language": "english"}))
 
     
 
