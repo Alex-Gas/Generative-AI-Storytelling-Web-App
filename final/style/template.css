@@ -1,5 +1,5 @@
 body{
-    background-color:lemonchiffon;
+    background-color:rgb(27, 27, 29);
 }
 
 #main-window {
@@ -13,6 +13,7 @@ body{
     flex-direction: row;
     padding: 40px;
     min-height: 200px;
+    border-radius: 15px;
 }
 
     .toggleable-window{
@@ -24,6 +25,7 @@ body{
 
     #chat-window {
         display: none;
+        border-radius: 10px;
     }
 
         #chat-box {
@@ -32,6 +34,7 @@ body{
             background-color:#94a6b8;
             justify-content: space-between;
             height: 100%;
+            
         }
 
             #chat {
@@ -41,12 +44,13 @@ body{
                 overflow-y: auto;
                 display: flex;
                 flex-direction: column;
+                border-radius: 5px;
             }
 
                 .chat-prompt-display{
                     margin-top: 10px;
                     padding: 10px;
-                    background-color: coral;
+                    background-color: rgb(198, 209, 224);
                     border-radius: 3px;
                     width:70%;
                     word-wrap: break-word;
@@ -59,7 +63,7 @@ body{
                 .chat-answer-display{
                     margin-top: 10px;
                     padding: 10px;
-                    background-color:cyan;
+                    background-color:rgb(119, 210, 240);
                     border-radius: 3px;
                     width:70%;
                     margin-left: auto;  
@@ -93,51 +97,59 @@ body{
 
     #settings-window {
         display: block;
+        border-radius: 10px;
     }
 
         #settings-box {
             display: flex;
             flex-direction: column;
-            background-color: lightslategray;
             padding: 20px;
             justify-content: space-between;
             height: calc(100% - 40px);
             overflow-y: auto;
         }
-        /*
-            #link-bar {
-                display: flex;
-                flex-direction: row;
-                background-color:lightslategray;
-                padding: 10px;
-                justify-content: space-between;
+
+
+
+
+            #title h1{
+                text-align: center;
+                margin-top: 0px;
             }
-
-                #link-bar input{
-                    width: 70%;
-                }
-
-                #link-bar button {
-                    width: 20%;
-                }
-        */
-            
-            #feedback-box{
-                background-color:white;
-                height: 100px;
-                padding: 20px;
-            }
-
-                #feedback{
-                    background-color: white;
-                }
 
             #settings{
-                background-color:burlywood;
-                height: 300px;
+                background-color:white;
                 padding: 20px;
                 display: flex;
                 flex-direction: column;
+                border-radius: 10px;
+            }
+
+            #settings h2{
+                margin-top: 10px;
+            }
+
+            .setting{
+                margin-top: 0px;
+                margin-bottom: 10px;
+                height: 40px;
+                
+            }
+
+            #settings p{
+                margin: 5px;
+            }
+
+            #settings select{
+                margin: 5px;
+            }
+
+            #settings-box button{
+                width: 100px;
+                height: 30px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 30px;
             }
 
 
