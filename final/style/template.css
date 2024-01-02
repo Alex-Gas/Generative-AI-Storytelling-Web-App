@@ -36,6 +36,9 @@ body{
             height: 100%;
             
         }
+        #chatMessage {
+            white-space: pre-line; /* or 'pre-wrap' if you also want to preserve formatting */
+        }
 
             #chat {
                 background-color:white;
@@ -54,10 +57,13 @@ body{
                     border-radius: 3px;
                     width:70%;
                     word-wrap: break-word;
+                    align-self: flex-end;
+                    
+                    
                 }
 
                     .chat-prompt-display p {
-                        margin: 0;
+                        /* margin: 0; */
                     }
 
                 .chat-answer-display{
@@ -65,15 +71,21 @@ body{
                     padding: 10px;
                     background-color:rgb(119, 210, 240);
                     border-radius: 3px;
-                    width:70%;
-                    margin-left: auto;  
+                    /* width:min-content; */
+                    align-self: flex-start;
                     word-wrap: break-word;
+                    overflow-wrap: break-word;
+                }
+
+                .chat-answer-display pre{
+                    white-space: pre-wrap;
+                    word-break: break-word;
                 }
 
                     .chat-answer-display p {
                         margin: 0;
                     }
-
+                
 
 
             #prompt-bar {

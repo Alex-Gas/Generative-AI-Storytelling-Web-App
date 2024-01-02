@@ -95,7 +95,7 @@ async function submitPrompt(){
         console.log(qu);
 
         // Now call 'addChatElement' with the awaited 'firstQu'
-        await addChatElement(qu);
+        await displayAIAnswer(qu);
         unlockInput();
     }
      catch (error) {
@@ -141,7 +141,7 @@ async function submitSettings(){
         showChat(); // Show the chat UI
 
         // Now call 'addChatElement' with the awaited 'firstQu'
-        await addChatElement(firstQu);
+        await displayAIAnswer(firstQu);
     } catch (error) {
         console.error('Error:', error);
         // Handle the error appropriately
@@ -179,18 +179,39 @@ function displayUserPrompt(text){
 }
 
 // calling this function display what the AI answeres in the chat
+// function displayAIAnswer(text){
+//     if (text != null){
+//         let box = document.createElement("div");
+//         box.classList.add("chat-answer-display");
+//         spawnChatBox(formatResponseForHTML(text), box);
+//     }
+//     else {
+//         console.log("AI answer is null")
+//     }
+// }
+
+
+// calling this function display what the AI answers in the chat
 function displayAIAnswer(text){
     if (text != null){
         let box = document.createElement("div");
         box.classList.add("chat-answer-display");
-        spawnChatBox(text, box);
+        let pre = document.createElement("pre");
+        pre.innerHTML = formatResponseForHTML(text); // Use innerHTML to interpret <br> tags
+        box.appendChild(pre);
+        appendMessageToChat(box);
     }
     else {
         console.log("AI answer is null")
     }
 }
 
-
+// Function to append the message box to the chat container
+function appendMessageToChat(box) {
+    let chatDiv = document.getElementById("chat");
+    chatDiv.appendChild(box);
+    chatDiv.scrollTop = chatDiv.scrollHeight; // Auto-scroll to the latest message
+}
 
 // this just constructs html structure
 // its for UI only, ignore it
@@ -236,4 +257,8 @@ function showChat(){
 function showSettings(){
     document.getElementById("chat-window").style.display = "none";
     document.getElementById("settings-window").style.display = "block";
+}
+
+function formatResponseForHTML(response) {
+    return response.replace(/\n/g, '<br>');
 }
