@@ -1,3 +1,10 @@
+This is a prototype front-end web application allowing user to engage in an rpg-style generative text narrative generated dynamically by GPT-3 through OpenAI API.
+
+Features:
+- Dynamic communication with GPT-3
+- Functioning chat and settings interface
+- Choice between story genre and other settings
+
 All files of the finished project are in the ./final directory
 
 Setup:
